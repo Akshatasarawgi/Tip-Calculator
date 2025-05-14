@@ -9,3 +9,13 @@ Your users should be able to:
 
 # Screenshot 
 ![alt text](Screenshot.png)
+
+Solution URL: [https://github.com/Akshatasarawgi/Tip-Calculator]
+Live Site URL:  [https://tipcalculator13.netlify.app]
+
+# Learnings 
+I learnt why we use !important to override the other styles applied to the element previously. 
+I am still learning how to create the functions. 
+I learnt how the below statements to check if all the inputs are given, in order to calculate the results.
+if(!billAmount || !tipValue || !people) 
+        return  { totalTipPerPerson: 0 , totalSplitPerPerson: 0} 
