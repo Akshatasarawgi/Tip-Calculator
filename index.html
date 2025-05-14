@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="style.css" rel="stylesheet">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>  
+    <header>
+      <img src="./images/logo.svg" alt="logo">
+    </header>
+    <main>
+      <div class="container">
+      <!-- Form Container -->
+      <div class="form-container">
+      <div class="input-amount">
+        <label for="total-bill-amount" class="label">Bill</label><br>
+          <input type="number" id="total-bill-amount" class="bill-amount" min="0" placeholder="0" required />
+      </div>  
+      
+        <div class="input-tip-option">
+          <label for="tip-option" class="label">Select Tip %</label>
+          <div id="tip-option">
+          <button type="button" class="tip-button button" value="5">5%</button>
+          <button type="button" class="tip-button button" value="10">10%</button>
+          <button type="button" class="tip-button button" value="15">15%</button>
+          <button type="button" class="tip-button button" value="25">25%</button>
+          <button type="button" class="tip-button button" value="50">50%</button>
+          <input type="number" id="custom" placeholder="Custom" class="custom-tip" >
+        </div>
+        </div>
+
+        <div class="number-people">
+          <label for="number-of-people" class="label">Number of People <span class="error" id="error-message">Can't be zero</span></label>
+          <input type="number" id="number-of-people" min="1" class="number-people" placeholder="0"  required>
+        </div>
+      </div>
+      <!-- Form -->  
+
+      <!-- Result Box -->
+      <div class="result-container">
+        <div class="tip-due">
+          <h4>Tip Amount <br><span>/ person</span></h4>
+          <div class="input-wrapper">
+          <span class="currency">$</span>
+          <input type="text" class="tip-per-person" readonly value="0.00">
+        </div>
+        </div>
+        <div class="amount-due">
+          <h4>Total <br><span>/ person</span></h4>
+          <div class="input-wrapper">
+            <span class="currency">$</span>
+          <input type="text" class="total-per-person" readonly value="0.00">
+        </div>
+        </div>
+        <button type="button" class="reset-btn" onclick="reset()">RESET</button>
+      </div>
+      <!-- Result Box -->
+    </div>
+    </main>
+  <script src="script.js"></script>
+</body>
+</html>

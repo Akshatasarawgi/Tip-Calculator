@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green-400: hsl(172, 67%, 45%);
+    --green-900: hsl(183, 100%, 15%);
+    --grey-500: hsl(186, 14%, 43%);
+    --grey-400: hsl(184, 14%, 56%);
+    --grey-200: hsl(185, 41%, 84%);
+    --grey-50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+    --font-size: 24px;
+    --font-family: "Space Mono", monospace, sans-serif;
+    --font-weight: 700;
+}
+
+body {
+    background-color: var(--grey-200);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+header {
+    padding: 1%; 
+    margin: 1% auto;
+}
+
+.container {
+    width: 60vw;
+    height: 50vh;
+    background: var(--white);
+    display: flex;
+    border-radius: 10px;
+    padding: 3%;
+    margin:  1% auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    padding: 2%;
+    margin-right: 1%;
+    align-content: center;
+    width: 50%;
+}
+
+.result-container {
+    padding: 2%;
+    background-color: var(--green-900);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-container > div {
+    margin: 1% 0;
+}
+
+.form-container input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    height: 2em;
+    background-color: var(--grey-50);
+    text-align: right;
+    margin: 1% 0;
+    font-size: var(--font-size);
+    padding-right: 3%;
+    cursor: pointer;
+    font-family: var(--font-family);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-container input:hover {
+    border: 2px solid var(--green-400);
+}
+
+.form-container input:focus {
+    border: 1px solid var(--green-400);
+}
+
+
+label {
+    font-size: 14px;
+    color: var(--grey-500);
+    font-weight: 200;
+}
+
+.number-people label {
+    display: flex;
+    justify-content: space-between;
+}
+
+#tip-option {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 5%;
+    row-gap: 10%;   
+}
+
+.button {
+    background-color: var(--green-900);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: var(--font-family);
+    min-height: 2em;
+}
+
+.button:hover{
+    background-color: var(--grey-200);
+    color: var(--green-900);
+}
+
+.button:active {
+    background-color: var(--green-400);
+}
+
+.button:visited {
+    background-color: var(--white);
+}
+
+.selectedButton {
+    background-color: var(--green-400);
+    color: var(--green-900);
+}
+
+#tip-option input {
+    text-align: center;
+    font-size: 18px;
+}
+
+#tip-option input::placeholder {
+    color: var(--green-900);
+}
+
+.error {
+    display: none;
+    color: rgb(197, 68, 68);
+}
+
+/* adding !important to override other input styles like hover and focus*/
+.input-error {
+  border: 1px solid rgb(197, 68, 68) !important;
+}
+
+.tip-due {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 0;
+    width: 100%;
+}
+
+.tip-due h4 {
+    color: var(--white);
+    font-weight: 800;
+    width: 50%;
+}
+
+.tip-due h4 span {
+    font-weight: 100;
+    color: var(--grey-400);
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.currency {
+   color: var(--green-400);
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    font-family: var(--font-family);
+    font-size: 2em;
+    width: 10%;
+    text-align: right;
+    
+}
+
+.tip-per-person {
+    color: var(--green-400);
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    font-family: var(--font-family);
+    font-size: 1.7em;
+    text-align: right;
+    width: 80%;
+}
+
+.amount-due {
+    display: flex;
+    justify-content: left;
+    margin: 5% auto;
+    width: 100%;
+}
+
+.amount-due h4 {
+    color: var(--white);
+    font-weight: 800;
+    width : 50%;
+}
+
+.amount-due h4 span {
+    font-weight: 100;
+    color: var(--grey-400);
+}
+
+.total-per-person {
+    color: var(--green-400);
+    font-weight: 500;
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    font-family: var(--font-family);
+    font-size: 1.7em;
+    text-align: right;
+
+}
+
+.reset-btn {
+    margin-top: 10%;
+    height: 3em;
+    border-radius: 5px;
+    background-color: var(--green-400);
+    color: var(--green-900);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.reset-btn:hover {
+    background-color: var(--grey-200);  
+}
+
+.bill-amount{
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+.number-people {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+
+@media (max-width: 1100px) {
+    .container {
+    width: 100vw;
+    height: max-content;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+    min-width: 120px;
+    max-width: 700px;
+    padding: 5%;
+    margin: 3% auto;
+    } 
+
+    .form-container {
+        width: 100%;
+    }
+    
+    .result-container {
+        width: 100%;
+    }
+
+    #tip-option {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 5%;
+        row-gap: 10%;   
+    }
+
+    .button {
+        min-height: 3em;
+    }
+
+    .form-container > div {
+        margin: 5% 0;
+    }
+    
+}
