@@ -19,8 +19,8 @@ Your users should be able to:
 ![alt text](Screenshot.png)
 
 ## Links
-Solution URL: [https://github.com/Akshatasarawgi/Tip-Calculator]
-Live Site URL:  [https://tipcalculator13.netlify.app]
+ Solution URL: [https://github.com/Akshatasarawgi/Tip-Calculator]
+ Live Site URL:  [https://tipcalculator13.netlify.app]
 
 # Learnings 
 I learnt why we use !important to override the other styles applied to the element previously. 
