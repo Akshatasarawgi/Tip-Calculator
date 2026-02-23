@@ -1,5 +1,5 @@
 # Tip Calculator App
-Created a tip calculator app called Splitter, that takes in the total bill amount, tip percentage of choice, and the number of people to split the bill amongst. That App gives the total amount to be paid by each individual and additionally display the tip amount each individual pays.
+Created a tip calculator app called Splitter, that takes in the total bill amount, tip percentage of choice, and the number of people to split the bill amongst. The App gives the total amount to be paid by each individual and additionally display the tip amount each individual pays.
 
 ## Table of Contents
 - [Overview](#overview)
